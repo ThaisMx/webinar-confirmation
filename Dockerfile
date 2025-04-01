@@ -1,4 +1,4 @@
-# Estágio de build
+# Estágio de build - v2 force update
 FROM node:18-alpine AS builder
 
 WORKDIR /app
