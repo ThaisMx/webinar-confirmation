@@ -95,7 +95,7 @@ export default function Home() {
       <div style={{ marginBottom: '30px' }}>
         <div style={{ marginBottom: '20px' }}>
           <Image
-            src="/images/willian-aksenen.jpg"
+            src="https://lp.willaksenen.com.br/images/willian-aksenen.jpg"
             alt="Willian Aksenen"
             width={150}
             height={150}
