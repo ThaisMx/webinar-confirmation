@@ -24,13 +24,6 @@ const nextConfig = {
   output: 'standalone',
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
   assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '',
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.css$/,
-      use: ['style-loader', 'css-loader', 'postcss-loader'],
-    })
-    return config
-  },
 }
 
 mergeConfig(nextConfig, userConfig)
