@@ -1,5 +1,7 @@
-import { redirect } from "next/navigation"
+"use client"
+
+import ConfirmacaoWebinar from './confirmacao-webinar/page'
 
 export default function Home() {
-  redirect("/confirmacao-webinar")
+  return <ConfirmacaoWebinar />
 }

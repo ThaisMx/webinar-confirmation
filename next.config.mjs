@@ -15,6 +15,7 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    domains: ['lp.willaksenen.com.br', 'webinar-webinar-confirmation.61vc6p.easypanel.host'],
   },
   experimental: {
     webpackBuildWorker: true,
@@ -22,8 +23,9 @@ const nextConfig = {
     parallelServerCompiles: true,
   },
   output: 'standalone',
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
-  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  basePath: '',
+  assetPrefix: '',
+  trailingSlash: true,
 }
 
 mergeConfig(nextConfig, userConfig)
