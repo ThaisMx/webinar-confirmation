@@ -5,16 +5,15 @@ WORKDIR /app
 
 # Copiar arquivos de dependências
 COPY package*.json ./
-COPY yarn.lock ./
 
 # Instalar dependências
-RUN yarn install --frozen-lockfile
+RUN npm ci
 
 # Copiar o resto dos arquivos
 COPY . .
 
 # Build da aplicação
-RUN yarn build
+RUN npm run build
 
 # Estágio de produção
 FROM node:18-alpine AS runner
@@ -24,7 +23,7 @@ WORKDIR /app
 ENV NODE_ENV=production
 
 # Copiar apenas os arquivos necessários do estágio de build
-COPY --from=builder /app/next.config.js ./
+COPY --from=builder /app/next.config.mjs ./
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
