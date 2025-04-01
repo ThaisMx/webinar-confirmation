@@ -23,8 +23,8 @@ const nextConfig = {
     parallelServerCompiles: true,
   },
   output: 'standalone',
-  basePath: '',
-  assetPrefix: '',
+  basePath: '/webinar-confirmation',
+  assetPrefix: '/webinar-confirmation',
   trailingSlash: true,
 }
 
